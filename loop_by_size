@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+# I keep it in a () to be able to change the IFS which is 
+# I think* the delim
+
+i=1
+(
+file_names=($(ls -S | grep ".*\.mp4"))
+for e in ${file_names[@]}; do
+  mv $e $i.mp4
+  ((i++))
+done;
+)

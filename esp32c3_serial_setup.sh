@@ -6,7 +6,7 @@
 
 
 # extract the esp's ttyUSB device (often ttyUSB0)
-file_name=$(./tty_lsusb_assosiate.sh | grep ".*Silicon_Labs.*" |sed  "s/\([a-zA-Z0-9/]*\).*/\1/")
+file_name=$($HOME/scripts/tty_lsusb_assosiate.sh | grep ".*Silicon_Labs.*" |sed  "s/\([a-zA-Z0-9/]*\).*/\1/")
 
 
 # Sets up the serial port's mode as mentioned in their docs
